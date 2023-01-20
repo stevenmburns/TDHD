@@ -1,0 +1,44 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Read the /ReadMeFirst/ReadMeFirst.tex for an introduction. 
+% Check out the accompanying book "Even Better Books with LaTeX the Agile Way in 2023" for a discussion of the template and step-by-step instructions. 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), 1/1/2023. Feel free to use this template for your book project!
+% Contact me at mail@lode.de if you need help with the template or want editing and publishing services.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Balance the contents of two columns (as opposed to filling first the left column and then the right). This is used for the glossary.
+% See https://tex.stackexchange.com/questions/241094/multicol-column-balancing-only-after-a-minimum-number-of-lines
+
+\ifxetex
+\usepackage[balancingshow]{multicol}
+\usepackage{regexpatch}
+
+\newcounter{multicolminlines}
+\setcounter{multicolminlines}{1}
+
+\makeatletter
+\xpatchcmd\balance@columns
+   {\ifnum\dimen@<\topskip
+     \mult@info\@ne
+       {Start value
+          \the\dimen@  \space ->
+          \the\topskip \space (corrected)}%
+     \dimen@\topskip
+   \fi}
+   {\skip@\c@multicolminlines\baselineskip
+   \advance\skip@-\baselineskip
+   \advance\skip@\topskip
+   \ifnum\dimen@<\skip@
+     \mult@info\@ne
+       {Start value
+          \the\dimen@  \space ->
+          \the\skip@ \space (corrected)}%
+     \dimen@\skip@
+   \fi
+   }
+   {\typeout{Success!}}{\patchFAILED}
+\makeatother
+\else
+
+    \newenvironment{multicols}[2][]{}{}
+
+\fi

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="3.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+	<dc:identifier id="BookId">urn:uuid:654ae683-e021-4edd-b350-3614ae4c3411</dc:identifier>
+	<dc:language>en</dc:language>
+	<dc:title>Even Better Books with LaTeX, the Agile Way in 2023</dc:title>
+	<dc:publisher>Clemens Lode Verlag e.K.</dc:publisher>
+	<dc:creator>Lode, Clemens</dc:creator>
+	<dc:rights>Lode, Clemens</dc:rights>
+	<meta name="cover" content="cover.jpg" />
+    <meta property="dcterms:modified">2022-11-22T14:37:47Z</meta>
+  </metadata>
+  <manifest>
+	<item id="main.htm" href="main.htm" media-type="text/html" properties="scripted"/>
+	<item id="main.css" href="main.css" media-type="text/css"/>
+	  <item id="cover.jpg" href="images/cover.jpg" media-type="image/jpeg"/>
+        <item id="cover.png" href="images/cover.png" media-type="image/png"/>
+        <item id="white.png" href="images/white.png" media-type="image/png"/>
+      <item id="OEBPScover.jpg" href="cover.jpg" media-type="image/jpeg"/>
+        <item id="OEBPScover.png" href="cover.png" media-type="image/png"/>
+        <item id="OEBPSwhite.png" href="white.png" media-type="image/png"/>
+	<item id="nav.xhtml" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+	<item id="MathJax.js" href="MathJax.js" media-type="application/javascript"/>
+	<item id="main0x.svg" href="main0x.svg" media-type="image/svg+xml"/>
+	<item id="main1x.svg" href="main1x.svg" media-type="image/svg+xml"/>
+	<item id="main2x.svg" href="main2x.svg" media-type="image/svg+xml"/>
+	<item id="main3x.svg" href="main3x.svg" media-type="image/svg+xml"/>
+	<item id="main4x.svg" href="main4x.svg" media-type="image/svg+xml"/>
+	<item id="main5x.svg" href="main5x.svg" media-type="image/svg+xml"/>
+	<item id="main6x.svg" href="main6x.svg" media-type="image/svg+xml"/>
+  </manifest>
+  <spine>
+    <itemref idref="main.htm"/>
+    <itemref idref="nav.xhtml" linear="no"/>
+  </spine>
+
+</package>

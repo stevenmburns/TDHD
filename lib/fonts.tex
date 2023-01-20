@@ -1,0 +1,55 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Read the /ReadMeFirst/ReadMeFirst.tex for an introduction. 
+% Check out the accompanying book "Even Better Books with LaTeX the Agile Way in 2023" for a discussion of the template and step-by-step instructions. 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), 1/1/2023. Feel free to use this template for your book project!
+% Contact me at mail@lode.de if you need help with the template or want editing and publishing services.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Set font size of captions to small.
+\ifxetex
+    \usepackage[labelfont=bf]{caption}
+    \captionsetup{font=small}
+\fi
+
+% Shorter command for textemdash
+\newcommand{\emdash}[1][]{\textemdash}    
+
+% Set bibliography to footnote size
+\renewcommand{\bibfont}{\footnotesize}
+% you can use ``same'' (same font as your document's), ``sf'', ``tt''  or ``rm'' for monospaced font, also see https://www.ctan.org/pkg/url
+\usepackage{url}
+\urlstyle{same}
+
+%-------------------------------------------
+% Create hyperlinks within PDF files but do not mark them as links.
+\ifxetex
+    \usepackage{hyperref}[2011/02/05]
+    \hypersetup{hidelinks}
+\fi
+
+% Font tweaks not available for e-books.
+\ifxetex
+% Prevent splitting footnotes over several pages, see https://texfaq.org/FAQ-splitfoot
+    \interfootnotelinepenalty=10000
+
+% Set the footnote font size to very small
+    \renewcommand{\footnotesize}{\scriptsize}
+
+
+% Set the font size of index to very small
+    \usepackage{imakeidx}
+    \indexsetup{othercode=\footnotesize}    
+
+% prefer more spaces between words rather than more hyphenations at the end of a line
+    \sloppy    
+
+% Slightly tweak font spacing for aesthetics.
+    \usepackage{microtype}
+    \usepackage{lmodern}
+
+% Use Linux Libertine font. For other fonts, check out http://www.tug.dk/FontCatalogue/
+    \usepackage{libertine}
+\fi
+
+

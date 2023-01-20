@@ -1,0 +1,30 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Read the /ReadMeFirst/ReadMeFirst.tex for an introduction. 
+% Check out the accompanying book "Even Better Books with LaTeX the Agile Way in 2023" for a discussion of the template and step-by-step instructions. 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), 1/1/2023. Feel free to use this template for your book project!
+% Contact me at mail@lode.de if you need help with the template or want editing and publishing services.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Upload hires (author_highres.png) and lowres picture (author.jpg) of author into images folder, and uncomment the 5 includegraphics lines.
+% Replace quotation text
+% Add text describing your motivation, your professional background, what you are currently doing, and how to connect with you.
+
+\chapter{The Author \yourName}\label{the-author:cha}
+
+\begin{center}
+
+\ifuseAuthorImage
+\ifxetex
+	\includegraphics[width=.7\textwidth]{\authorImageHiRes}
+\else
+	\includegraphics{\authorImage}
+\fi
+\fi
+
+\end{center}
+
+\begin{myquotation} Here is space for a quotation that describes your journey through life (as opposed to just during the writing of this book). Pick one that best describes you, your attitude, or something you admire. Be personal!\end{myquotation}
+
+
+Describe your dreams, what goals you have in life, where you went to school or studied, and what job you currently work or worked in the past. Make clear what motivated you to start writing. Finally, add contact points where people can connect with you (mail, Facebook, Instagram, TikTok, YouTube, Twitter, etc.). 

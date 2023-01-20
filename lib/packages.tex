@@ -1,0 +1,50 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Read the /ReadMeFirst/ReadMeFirst.tex for an introduction. 
+% Check out the accompanying book "Even Better Books with LaTeX the Agile Way in 2023" for a discussion of the template and step-by-step instructions. 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), 1/1/2023. Feel free to use this template for your book project!
+% Contact me at mail@lode.de if you need help with the template or want editing and publishing services.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% PDF/EPUB output
+\input{lib/ebook}
+
+% Language support
+\input{lib/language}
+
+% Hyphenation support
+\input{lib/hyphenation}
+
+% Bibliography support
+\input{lib/bibliography}
+
+% Define book dimensions
+\input{lib/bookformat}
+
+% Define box commands
+\input{lib/boxes}
+
+% Uncomment for more error and warning messages
+%\input{lib/debug}
+
+% Set up a balanced multicol environment that can end mid-page (needs to be loaded before fonts because of imakeidx package)
+\input{lib/multicols}
+
+% Define/load fonts
+\input{lib/fonts}
+
+% Initialize TikZ system
+\input{lib/inittikz}
+
+% Define the blankpage command and deals with page numbers
+\input{lib/page}
+
+% allows the redefinition of nameref
+\usepackage{letltxmacro}
+
+% provides the ding command for special symbols
+\usepackage{pifont}
+
+% Support for numbered lists
+\usepackage{enumitem}

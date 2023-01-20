@@ -1,0 +1,19 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Read the /ReadMeFirst/ReadMeFirst.tex for an introduction. 
+% Check out the accompanying book "Even Better Books with LaTeX the Agile Way in 2023" for a discussion of the template and step-by-step instructions. 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), 1/1/2023. Feel free to use this template for your book project!
+% Contact me at mail@lode.de if you need help with the template or want editing and publishing services.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Standard American language settings
+
+% activate American language (and \babelEN)
+\usepackage[american]{babel}
+
+% activate German language (and \babelDE)
+%\usepackage[ngerman]{babel}
+
+% Macro to support multiple languages:
+\newcommand{\babelDE}[1]{\ifnum\pdfstrcmp{\languagename}{ngerman}=0 {#1}\fi}
+\newcommand{\babelEN}[1]{\ifnum\pdfstrcmp{\languagename}{american}=0 {#1}\fi}
+

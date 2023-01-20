@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Read the /ReadMeFirst/ReadMeFirst.tex for an introduction. 
+% Check out the accompanying book "Even Better Books with LaTeX the Agile Way in 2023" for a discussion of the template and step-by-step instructions. 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), 1/1/2023. Feel free to use this template for your book project!
+% Contact me at mail@lode.de if you need help with the template or want editing and publishing services.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Selecting document class scrbook to be in the two-page mode and accommodate for the binding of a printed book.
+% The bibliography receives an entry in the table of contents but no number.
+\documentclass[pagesize=auto,bibliography=totocnumbered]{scrbook}
+
+\input{setup.tex}
+\title{\mytitle}
+
+% load additional LaTeX libraries.
+\input{lib/packages}
+
+% ---------- Preamble
+
+% Needs to be in the preamble
+% make \nameref{label} use italics:
+\makeatletter
+\AtBeginDocument{\@ifdefinable{\myorg@nameref}{\LetLtxMacro\myorg@nameref\nameref\DeclareRobustCommand*{\nameref}[1]{\textit{\myorg@nameref{#1}}}}}
+\makeatother
+
+
+% (Only) printed books have indexes
+% allow 3 columns for index to save space
+% Start tracking index commands, has to be in the main file
+\ifxetex
+    \usepackage{idxlayout}
+    \makeindex[title=Index,columns=3]
+\else
+%    \usepackage{tex4ebook}
+\fi
+
+\begin{document}
+
+\ifxetex
+\else
+%\coverimage[scale=0.8]{OEBPS/cover.jpg}
+\fi
+
+
+\input{style-guide.tex}
+\pagestyle{empty}
+
+% ---------- Front matter
+\frontmatter
+
+% front matter chapter entries use roman page numbering (i, ii, iii, iv, ...)
+\pagenumbering{roman}
+
+
+
+% Remove this line for your actual book. It is only for advertisement.
+\input{front/template-front}\blankpage
+
+\input{front/half-title}\blankpage
+
+% the additional title with the cover is not needed for ebooks
+\ifxetex
+    \input{front/title}\newpage
+\fi
+
+\input{front/publisher}\newpage
+\input{front/dedication}\blankpage
+\input{front/epigraph}\blankpage
+
+\input{front/tableofcontents.tex}\blankpage
+
+
+\input{front/foreword}\blankpage
+\input{front/preface}\blankpage
+
+% Headers and Footers
+\pagestyle{fancy}
+\fancyhf{}
+
+% left hand even page
+\fancyhead[LE]{\nouppercase{\rightmark\hfill\leftmark}}
+
+% right hand odd page
+\fancyhead[RO]{\nouppercase{\leftmark\hfill\rightmark}}
+
+% left hand even page / right hand odd page
+\fancyfoot[LE,RO]{\thepage}
+
+% ---------- Main matter
+\mainmatter
+
+% reset to normal page numbering (1, 2, 3, ...)
+\renewcommand*{\chapterpagestyle}{plain}
+\pagenumbering{arabic}
+
+
+
+    
+% Add additional / remove chapters if necessary
+\input{chapters/0-latex.tex}\newpage
+\input{chapters/01-advantages-latex.tex}\newpage
+\input{chapters/02-generate-first-ebook.tex}\newpage
+\input{chapters/03-filling-template.tex}\newpage
+
+% ---------- Back matter
+\backmatter
+
+\input{back/advertisement}\blankpage
+\input{back/author}\blankpage
+\input{back/thebooksstory}\blankpage
+
+\input{back/questions}\blankpage
+\input{back/ideas}\blankpage
+\input{back/glossary}\blankpage
+
+% add separate quotations page (sources in the e-book are already included in the text body)
+\ifxetex
+    \input{back/quotations}\blankpage
+\fi
+
+\input{back/bibliography}\blankpage
+
+% ---------- Appendix
+\appendix
+
+% the index page, only for printed PDF
+\ifxetex
+    %optional
+    %\indexprologue{Replace index prologue with an own introduction of how to contact you when there is an errata concerning the index.}
+    
+    \printindex\blankpage
+    \thispagestyle{empty}
+\fi
+
+\input{back/amazon}\blankpage
+\input{back/last}
+
+\end{document}

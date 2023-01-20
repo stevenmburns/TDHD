@@ -1,0 +1,21 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Read the /ReadMeFirst/ReadMeFirst.tex for an introduction. 
+% Check out the accompanying book "Even Better Books with LaTeX the Agile Way in 2023" for a discussion of the template and step-by-step instructions. 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), 1/1/2023. Feel free to use this template for your book project!
+% Contact me at mail@lode.de if you need help with the template or want editing and publishing services.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Command to add some text into the bibliography (between the title and the list of referenced books)
+% See https://tex.stackexchange.com/questions/197061/text-between-index-or-bibliography-title-and-content
+
+% uncomment if you want to add a preface for this section
+%\bibpreface{Write here the preface of your list of recommended reading titles. Delete this line to have no preface for this section.}
+
+\ifxetex
+    \printbibliography
+\else
+    \bibliographystyle{plainnat}
+    \babelDE{\bibliography{chapters/bibliography/german}}
+    \babelEN{\bibliography{chapters/bibliography/english}} 
+\fi

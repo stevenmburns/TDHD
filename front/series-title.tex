@@ -1,0 +1,39 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Read the /ReadMeFirst/ReadMeFirst.tex for an introduction. 
+% Check out the accompanying book "Even Better Books with LaTeX the Agile Way in 2023" for a discussion of the template and step-by-step instructions. 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), 1/1/2023. Feel free to use this template for your book project!
+% Contact me at mail@lode.de if you need help with the template or want editing and publishing services.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Fill the values in the setup.tex if you want to use a series
+
+\ifseries
+\thispagestyle{empty}
+
+
+\parbox{0.9\textwidth}{
+  \begin{center}
+	\bfseries \sffamily \LARGE \titleOfTheBookSeries\\
+    \textit{\nameOfTheBookSeries}
+  \end{center}
+}
+
+\begin{center}
+
+\psvectorian[height=10mm]{75}
+
+% If there are five or more parts, add additional lines.
+% Move the textbf formatting to the appropriate line of this part.
+
+\sffamily \textbf{Part I: \partOneTitle}
+
+\sffamily Part II: \partTwoTitle
+
+\sffamily Part III: \partThreeTitle
+
+\sffamily Part IV: \partFourTitle
+
+\end{center}
+
+\fi

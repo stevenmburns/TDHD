@@ -1,0 +1,57 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Read the /ReadMeFirst/ReadMeFirst.tex for an introduction. 
+% Check out the accompanying book "Even Better Books with LaTeX the Agile Way in 2023" for a discussion of the template and step-by-step instructions. 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), 1/1/2023. Feel free to use this template for your book project!
+% Contact me at mail@lode.de if you need help with the template or want editing and publishing services.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% If your book is using images going beyond the usual margins, set bleed to 0.125in and activate the corresponding option in Amazon KDP
+\newcommand{\bleed}{0in}
+%\newcommand{\bleed}{0.125in}
+
+\newcommand{\margintop}{0.3in}
+\newcommand{\marginbottom}{0.3in}
+\newcommand{\marginoutside}{0.3in}
+
+
+% The inner margins depend on the number of pages of your book. 
+% Note that there is a maximum number of pages depending on your book's format, paperback vs hardcover format, and coloring, see https://kdp.amazon.com/en_US/help/topic/GVBQ3CMEQW3W2VL6
+
+% 24 - 150 pages
+\newcommand{\margininside}{0.425in}
+% 151 - 300 pages
+%\newcommand{\margininside}{0.55in}
+% 301 - 500 pages
+%\newcommand{\margininside}{0.675in}
+% 501 - 700 pages
+%\newcommand{\margininside}{0.8in}
+% 701 - 828 pages
+%\newcommand{\margininside}{0.925in}
+
+
+% Select a book format
+
+% Hardcover / Softcover Formats. Selecting one of these ensures that you can use the same PDF for hard and softcover books on Amazon
+
+%\newcommand{\bookwidth}{5.5in}\newcommand{\bookheight}{8.5in}
+\newcommand{\bookwidth}{6in}\newcommand{\bookheight}{9in}
+%\newcommand{\bookwidth}{6.14in}\newcommand{\bookheight}{9.21in}
+%\newcommand{\bookwidth}{7in}\newcommand{\bookheight}{10in}
+
+% Hardcover-only formats. Selecting one of these requires you to create a separate PDF for a possible softcover version.
+
+%\newcommand{\bookwidth}{8.25in}\newcommand{\bookheight}{11in}
+
+% Softcover-only formats. Selecting one of these requires you to create a separate PDF for a possible hardcover version.
+
+%\newcommand{\bookwidth}{5in}\newcommand{\bookheight}{8in}
+%\newcommand{\bookwidth}{5.25in}\newcommand{\bookheight}{8in}
+%\newcommand{\bookwidth}{5.06in}\newcommand{\bookheight}{7.81in}
+%\newcommand{\bookwidth}{6.69in}\newcommand{\bookheight}{9.61in}
+%\newcommand{\bookwidth}{7.44in}\newcommand{\bookheight}{9.69in}
+%\newcommand{\bookwidth}{7.5in}\newcommand{\bookheight}{9.25in}
+%\newcommand{\bookwidth}{8in}\newcommand{\bookheight}{10in}
+%\newcommand{\bookwidth}{8.5in}\newcommand{\bookheight}{11in}
+
+\usepackage[paperwidth=\dimexpr\bookwidth+\bleed\relax, paperheight=\dimexpr\bookheight+\bleed+\bleed\relax, inner=\margininside, outer=\dimexpr\marginoutside+\bleed\relax, top=\dimexpr\margintop+\bleed\relax, bottom=\dimexpr\marginbottom+\bleed\relax,includehead, includefoot, headheight=32pt]{geometry}
