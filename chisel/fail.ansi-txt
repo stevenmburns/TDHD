@@ -1,0 +1,22 @@
+[0m[[0m[0minfo[0m] [0m[0mwelcome to sbt 1.4.9 (Ubuntu Java 11.0.17)[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project chisel-build from plugins.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading project definition from /home/smburns/TDHD/chisel/project[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project root from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mset current project to tdhd (in build file:/home/smburns/TDHD/chisel/)[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/smburns/TDHD/chisel/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPopCountSoftwareTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Popcount with value 0 should return 0 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  1 did not equal 0 (tdhd.scala:26)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mScalaTest[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 327 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed: Total 1, Failed 1, Errors 0, Passed 0[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	tdhd.PopCountSoftwareTest[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 4 s, completed Feb 2, 2023, 11:38:06 AM[0m
+[0J
