@@ -1,0 +1,8 @@
+*.aux
+*.idx
+*.log
+*.lof
+*.out
+*.toc
+*.lot
+_minted-main/
