@@ -1,5 +1,0 @@
-Make:add("bibtex","bibtex ${input}")
-Make:htlatex {}
-Make:bibtex {}
-Make:htlatex {}
-Make:htlatex {}
