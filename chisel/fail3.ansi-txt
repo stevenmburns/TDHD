@@ -20,4 +20,3 @@
 [0m[[0m[31merror[0m] [0m[0m	tdhd.PopCountSoftwareTest3[0m
 [0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
 [0m[[0m[31merror[0m] [0m[0mTotal time: 5 s, completed Feb 2, 2023, 11:50:08 AM[0m
-[0J
