@@ -81,12 +81,18 @@ class PopCountSoftwareTest_Troll extends PopCountSoftwareTester(PopCountTroll.ap
 
 class PopCountSoftwareTest_Trolla extends PopCountSoftwareTester(PopCountTrolla.apply)
 
+class PopCountSoftwareTest_Trollc extends PopCountSoftwareTester(PopCountTrollc.apply)
+
 class PopCountSoftwareTest_Acceptable0 extends PopCountSoftwareTester(PopCountAcceptable0.apply)
 
 class PopCountSoftwareTest_Acceptable extends PopCountSoftwareTester(PopCountAcceptable.apply)
 
 
-class PopCountExhaustiveSoftwareTest_Acceptable0 extends PopCountExhaustiveSoftwareTester(PopCountAcceptable.apply)
+class PopCountExhaustiveSoftwareTest_Acceptable0 extends PopCountExhaustiveSoftwareTester(PopCountAcceptable0.apply)
+
+class PopCountExhaustiveSoftwareTest_Acceptable extends PopCountExhaustiveSoftwareTester(PopCountAcceptable.apply)
+
+class PopCountExhaustiveSoftwareTest_Troll extends PopCountExhaustiveSoftwareTester(PopCountTroll.apply)
 
 class PopCountSpec extends Properties("Popcount") {
   val smallInteger = Gen.choose(0, 256)

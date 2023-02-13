@@ -14,9 +14,10 @@ object PopCountDreadful {
 
 object PopCountTroll {
   def apply(n : BigInt) : BigInt = {
+    def isset(i : Int) = (n & (BigInt(1)<<i)) != BigInt(0)
     var sum : BigInt = 0
     for { i <- 0 until 8 } {
-      if ((n & (BigInt(1)<<i)) != BigInt(0)) {
+      if (isset(i)) {
         sum += 1
       }
     }
@@ -27,6 +28,13 @@ object PopCountTroll {
 object PopCountTrolla {
   def apply(n : BigInt) : BigInt = {
     ((0 until 8) map {i => if ((n & (BigInt(1)<<i)) != BigInt(0)) 1 else 0}).foldLeft(0){_ + _}
+  }
+}
+
+object PopCountTrollc {
+  def apply(n : BigInt) : BigInt = {
+    def isset(i: Int) = (n & (BigInt(1)<<i)) != BigInt(0)
+    ((0 until 8) map {i => if(isset(i)) 1 else 0}).sum
   }
 }
 
